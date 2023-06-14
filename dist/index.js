@@ -31,6 +31,7 @@ to the "scripts" section
 
 Note this will run any code executed in index.ts but not other .ts files.
 */
+Object.defineProperty(exports, "__esModule", { value: true });
 /*
 Note: What is and isn't included by default and in strict mode
 can change from release to release
@@ -75,8 +76,6 @@ When enabled, the compiler will check all code paths in a function to ensure the
 //     if (age>10){
 //         return age
 //     }
-//     // undefined is implicit here
-//     return undefined
 // }    
 /*
 noUnusedLocals
@@ -84,9 +83,10 @@ Default: false
 Recommended:true
 When enabled, the compiler will report unused local variables.
 */
-// function doSomething(){
+// function doSomething(num:number){
 //     let unused;
-//     // console.log(unused);
+//     console.log(unused);
+//     return num**2
 // }
 /*
 noUnusedParameters
@@ -101,10 +101,12 @@ When enabled, the compiler will report unused parameters.
 Sometime you want to ignore the parameter without turning off this compiler option
 the _ represents a placeholder for an unused parameter, this is a convention that is built
 in to TypeScript
-*/
+// */
 // function unUsedParam2(_:Event, param2:string){
 //     console.log(param2)
 // }
+// let myArr = ['a', 'b', 'c', 'd', 'e']
+// myArr.filter( (_, index) => index % 2)
 /*
 strictNullChecks
 Default: true
@@ -200,7 +202,7 @@ create the area.d.ts file now
 //We now get error right away
 // import {squareFootage} from './area';
 // let myArea3=squareFootage(1, 2);
-// console.log(myArea3)
+// console.log(myArea3);
 /*
 Using Third Party JS Libraries
 and the
@@ -216,6 +218,6 @@ This package generates universally unique identifiers
 // to beable to use its types we can run 
 // npm install @types/uuid
 // Now the error has gone away
-// import { v4 as uuidv4 } from "uuid";
-// let uuid= uuidv4()
-// console.log(uuid)
+const uuid_1 = require("uuid");
+let uuid = (0, uuid_1.v4)();
+console.log(uuid);
