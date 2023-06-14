@@ -84,8 +84,7 @@ When enabled, the compiler will check all code paths in a function to ensure the
 //     if (age>10){
 //         return age
 //     }
-//     // undefined is implicit here
-//     // return 
+    
 // }    
 
 /*
@@ -94,9 +93,10 @@ Default: false
 Recommended:true
 When enabled, the compiler will report unused local variables.
 */
-// function doSomething(){
+// function doSomething(num:number){
 //     let unused;
 //     console.log(unused);
+//     return num**2
 // }
 
 /*
@@ -114,15 +114,19 @@ When enabled, the compiler will report unused parameters.
 Sometime you want to ignore the parameter without turning off this compiler option
 the _ represents a placeholder for an unused parameter, this is a convention that is built
 in to TypeScript
-*/
+// */
 // function unUsedParam2(_:Event, param2:string){
 //     console.log(param2)
 // }
 
+// let myArr = ['a', 'b', 'c', 'd', 'e']
+
+// myArr.filter( (_, index) => index % 2)
+
 
 /*
 strictNullChecks
-Default: false
+Default: true
 Recommended: true
 
 When enabled, null and undefined will not be acceptable values for variables 
@@ -197,9 +201,9 @@ Default: false
 Recommended: Depends
 When enabled TS will try to type check our JS code
 */
-// import {squareFootage} from './area';
-// let myArea2=squareFootage()
-// console.log(myArea2) //NaN
+import {squareFootage} from './area';
+let myArea2=squareFootage()
+console.log(myArea2) //NaN
 
 /*
 Note No Error Without checkJS
@@ -217,9 +221,9 @@ To TS our JS parameters are of any type, so this passes the type check
 */
 
 
-// import {squareFootageJD} from './area-js-doc';
-// // squareFootageJD();
-// squareFootageJD(2,3);
+import {squareFootageJD} from './area-js-doc';
+// squareFootageJD();
+squareFootageJD(2,3);
 
 
 /*

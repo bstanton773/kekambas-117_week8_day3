@@ -76,7 +76,7 @@ When enabled, the compiler will check all code paths in a function to ensure the
 //         return age
 //     }
 //     // undefined is implicit here
-//     // return 
+//     return undefined
 // }    
 /*
 noUnusedLocals
@@ -86,7 +86,7 @@ When enabled, the compiler will report unused local variables.
 */
 // function doSomething(){
 //     let unused;
-//     console.log(unused);
+//     // console.log(unused);
 // }
 /*
 noUnusedParameters
@@ -107,7 +107,7 @@ in to TypeScript
 // }
 /*
 strictNullChecks
-Default: false
+Default: true
 Recommended: true
 
 When enabled, null and undefined will not be acceptable values for variables
