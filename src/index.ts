@@ -259,7 +259,7 @@ This package generates universally unique identifiers
 // npm install @types/uuid
 // Now the error has gone away
 
-// import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
-// let uuid= uuidv4()
-// console.log(uuid)
+let uuid= uuidv4()
+console.log(uuid)
