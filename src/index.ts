@@ -201,9 +201,9 @@ Default: false
 Recommended: Depends
 When enabled TS will try to type check our JS code
 */
-import {squareFootage} from './area';
-let myArea2=squareFootage()
-console.log(myArea2) //NaN
+// import {squareFootage} from './area';
+// let myArea2=squareFootage()
+// console.log(myArea2) //NaN
 
 /*
 Note No Error Without checkJS
@@ -221,9 +221,9 @@ To TS our JS parameters are of any type, so this passes the type check
 */
 
 
-import {squareFootageJD} from './area-js-doc';
-// squareFootageJD();
-squareFootageJD(2,3);
+// import {squareFootageJD} from './area-js-doc';
+// // squareFootageJD();
+// squareFootageJD(2,3);
 
 
 /*
@@ -239,7 +239,7 @@ create the area.d.ts file now
 //We now get error right away
 // import {squareFootage} from './area';
 // let myArea3=squareFootage(1, 2);
-// console.log(myArea3)
+// console.log(myArea3);
 
 
 /*
